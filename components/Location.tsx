@@ -1,0 +1,58 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { weddingConfig } from "../wedding.config";
+
+export default function Location() {
+  const { location } = weddingConfig;
+
+  return (
+    <section className="relative overflow-hidden bg-transparent px-4 py-24 md:py-32">
+      <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-[#90AA90]/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-16 -right-12 h-64 w-64 rounded-full bg-warm-gold/10 blur-3xl" />
+
+      <motion.div
+        className="relative mx-auto max-w-3xl overflow-hidden rounded-[2.5rem] border border-palm-leaf/35 bg-[#fffdf7]/90 shadow-xl shadow-evergreen/10"
+        initial={{ opacity: 0, y: 36 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <div className="grid md:grid-cols-[0.85fr_1.15fr]">
+          {/* Location image */}
+          <div className="relative min-h-72 overflow-hidden">
+            <Image
+              src={location.venueImage}
+              alt={location.venueNameAr}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 340px"
+            />
+          </div>
+
+          <div className="p-8 text-center sm:p-12 md:text-left">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-fern">Where to find us</p>
+            <h2 className="mt-3 font-serif text-4xl font-semibold text-evergreen">The Location</h2>
+            <div className="mt-6 h-px w-16 bg-warm-gold/70 md:mx-0 mx-auto" />
+            <p className="mt-6 font-serif text-2xl font-semibold text-evergreen" lang="ar" dir="rtl">{location.venueNameAr}</p>
+            {location.hallNameAr && (
+              <p className="mt-1 font-serif text-xl font-medium text-fern" lang="ar" dir="rtl">{location.hallNameAr}</p>
+            )}
+            <p className="mt-2 text-hunter-green" lang="ar" dir="rtl">{location.areaAr}</p>
+            <p className="mt-5 text-sm leading-relaxed text-hunter-green">{location.arrivalNote}</p>
+            <a
+              href={location.mapUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-evergreen px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-lime-cream transition hover:bg-hunter-green focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-evergreen"
+            >
+              <span className="h-2 w-2 rounded-full bg-[#FFFD74]" aria-hidden="true" />
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}

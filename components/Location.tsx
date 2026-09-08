@@ -8,7 +8,7 @@ export default function Location() {
   const { location } = weddingConfig;
 
   return (
-    <section className="relative overflow-hidden bg-transparent px-4 py-24 md:py-32">
+    <section className="relative overflow-hidden bg-transparent px-4 pt-20 pb-36 md:pt-32 md:pb-48">
       <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-[#d88d9c]/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-16 -right-12 h-64 w-64 rounded-full bg-palm-leaf/15 blur-3xl" />
 
@@ -53,6 +53,12 @@ export default function Location() {
           </div>
         </div>
       </motion.div>
+
+      {/* Smooth, gradual fade-out from the light floral background into the emerald FAQ background */}
+      <div
+        className="pointer-events-none absolute bottom-0 inset-x-0 h-44 sm:h-56 bg-gradient-to-b from-transparent via-hunter-green/50 to-hunter-green"
+        aria-hidden="true"
+      />
     </section>
   );
 }

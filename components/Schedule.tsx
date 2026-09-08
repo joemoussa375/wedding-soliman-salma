@@ -103,31 +103,14 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-hunter-green px-4 pb-24 pt-32 md:pb-32 md:pt-40 text-lime-cream">
-      {/* Seamless curved arch transition from the light body background into deep emerald night */}
-      <div className="absolute top-0 inset-x-0 h-16 sm:h-24 pointer-events-none z-10 overflow-hidden leading-none">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="relative block w-full h-full text-[#faf7f5] fill-current"
-        >
-          <path d="M0,0 L1200,0 L1200,40 Q600,120 0,40 Z" />
-        </svg>
-      </div>
-
-      {/* Gentle gradient fog so the arch edge softens into the dark foliage */}
-      <div 
-        className="pointer-events-none absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#faf7f5]/30 via-transparent to-transparent z-10" 
-        aria-hidden="true" 
-      />
-
+    <section className="relative overflow-hidden bg-hunter-green px-4 pb-24 pt-16 md:pb-32 md:pt-24 text-lime-cream">
       {/* FAQ background image with rich emerald marble & gold veins texture */}
       <div
-        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-85 mix-blend-overlay"
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-80 mix-blend-overlay"
         style={{ backgroundImage: "url('/FAQ.png')" }}
         aria-hidden="true"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-hunter-green/85 via-evergreen/90 to-[#0e1d13]" aria-hidden="true" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-hunter-green via-evergreen/95 to-[#0e1d13]" aria-hidden="true" />
       
       {/* Ambient glowing orbs */}
       <div className="pointer-events-none absolute -left-16 top-20 h-64 w-64 rounded-full bg-[#d88d9c]/15 blur-3xl" aria-hidden="true" />

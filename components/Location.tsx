@@ -9,11 +9,11 @@ export default function Location() {
 
   return (
     <section className="relative overflow-hidden bg-transparent px-4 py-24 md:py-32">
-      <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-[#90AA90]/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-16 -right-12 h-64 w-64 rounded-full bg-warm-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 top-10 h-56 w-56 rounded-full bg-[#d88d9c]/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-16 -right-12 h-64 w-64 rounded-full bg-palm-leaf/15 blur-3xl" />
 
       <motion.div
-        className="relative mx-auto max-w-3xl overflow-hidden rounded-[2.5rem] border border-palm-leaf/35 bg-[#fffdf7]/90 shadow-xl shadow-evergreen/10"
+        className="relative mx-auto max-w-3xl overflow-hidden rounded-[2.5rem] border border-[#f2cbd4] bg-white/95 shadow-xl shadow-[#d88d9c]/10"
         initial={{ opacity: 0, y: 36 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -32,9 +32,9 @@ export default function Location() {
           </div>
 
           <div className="p-8 text-center sm:p-12 md:text-left">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-fern">Where to find us</p>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#c47585]">Where to find us</p>
             <h2 className="mt-3 font-serif text-4xl font-semibold text-evergreen">The Location</h2>
-            <div className="mt-6 h-px w-16 bg-warm-gold/70 md:mx-0 mx-auto" />
+            <div className="mt-6 h-px w-16 bg-[#e2a8b5] md:mx-0 mx-auto" />
             <p className="mt-6 font-serif text-2xl font-semibold text-evergreen" lang="ar" dir="rtl">{location.venueNameAr}</p>
             {location.hallNameAr && (
               <p className="mt-1 font-serif text-xl font-medium text-fern" lang="ar" dir="rtl">{location.hallNameAr}</p>
@@ -45,9 +45,9 @@ export default function Location() {
               href={location.mapUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-evergreen px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-lime-cream transition hover:bg-hunter-green focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-evergreen"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-evergreen px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-lime-cream transition hover:bg-hunter-green focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-evergreen shadow-md shadow-evergreen/20"
             >
-              <span className="h-2 w-2 rounded-full bg-[#FFFD74]" aria-hidden="true" />
+              <span className="h-2 w-2 rounded-full bg-[#f7c5ce] shadow-[0_0_8px_#f7c5ce]" aria-hidden="true" />
               Open in Google Maps
             </a>
           </div>

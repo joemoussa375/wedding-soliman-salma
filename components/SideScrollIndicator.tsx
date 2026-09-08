@@ -42,9 +42,9 @@ export default function SideScrollIndicator() {
       
       <div className="flex flex-col items-center">
         {/* Animated track line */}
-        <div className="relative h-12 sm:h-16 w-px bg-palm-leaf/30 overflow-hidden rounded-full">
+        <div className="relative h-12 sm:h-16 w-px bg-[#e2a8b5]/35 overflow-hidden rounded-full">
           <motion.div
-            className="absolute top-0 left-0 w-full h-1/2 bg-warm-gold rounded-full"
+            className="absolute top-0 left-0 w-full h-1/2 bg-[#d88d9c] rounded-full"
             animate={{ y: ["-100%", "200%"] }}
             transition={{
               duration: 1.5,
@@ -58,7 +58,7 @@ export default function SideScrollIndicator() {
         <motion.div
            animate={{ y: [0, 4, 0] }}
            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-           className="text-warm-gold -mt-1"
+           className="text-[#c47585] -mt-1"
         >
           <svg
             className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-current"

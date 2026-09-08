@@ -167,17 +167,17 @@ export default function CurtainSplash({
 
       {/* The Wedding Invite Card (revealed when curtains open) */}
       <motion.div 
-        className="relative z-10 w-[90vw] md:w-[600px] aspect-[1.42] bg-[#fdfbf7] rounded flex flex-col items-center justify-center shadow-2xl"
+        className="relative z-10 w-[90vw] md:w-[600px] aspect-[1.42] bg-[#fffbf9] rounded flex flex-col items-center justify-center shadow-2xl"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={isOpen ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
         transition={{ duration: 1.0, delay: 0.25, ease: "easeOut" }}
       >
-        <div className="absolute inset-2 md:inset-3 border-2 md:border-4 border-double border-warm-gold/60 rounded-sm opacity-80" />
+        <div className="absolute inset-2 md:inset-3 border-2 md:border-4 border-double border-[#e8b4c0]/80 rounded-sm opacity-90" />
 
         <div className="text-center font-serif text-evergreen px-6 z-10 flex flex-col items-center">
-          <p className="text-xs md:text-lg italic text-warm-gold mb-3 md:mb-5">{weddingConfig.splash.inviteIntroText}</p>
+          <p className="text-xs md:text-lg italic text-[#c47585] mb-3 md:mb-5">{weddingConfig.splash.inviteIntroText}</p>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-4 md:mb-6 tracking-wide bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 inline-block text-transparent bg-clip-text py-1">{weddingConfig.couple.fullName}</h2>
-          <div className="w-16 h-px bg-warm-gold/50 mb-4 md:mb-6" />
+          <div className="w-16 h-px bg-[#e2a8b5] mb-4 md:mb-6" />
           <p className="text-[10px] md:text-sm font-sans tracking-widest uppercase text-hunter-green leading-relaxed">
             {weddingConfig.event.date}<br />
             {weddingConfig.location.areaEn}

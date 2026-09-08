@@ -16,10 +16,10 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h1 className="inline-block bg-gradient-to-r from-evergreen via-fern to-hunter-green bg-clip-text p-1 md:p-2 font-serif text-4xl sm:text-5xl font-bold tracking-widest text-transparent md:text-7xl leading-tight">
-          <span className="block md:inline">{couple.partner1}</span>{" "}
-          <span className="block md:inline my-0 md:my-0 text-3xl sm:text-4xl md:text-7xl font-normal md:font-bold">{couple.ampersand || "&"}</span>{" "}
-          <span className="block md:inline">{couple.partner2}</span>
+        <h1 className="p-1 md:p-2 font-serif text-4xl sm:text-5xl font-bold tracking-widest md:text-7xl leading-tight">
+          <span className="block md:inline bg-gradient-to-r from-evergreen via-hunter-green to-fern bg-clip-text text-transparent">{couple.partner1}</span>{" "}
+          <span className="block md:inline my-0 md:my-0 text-3xl sm:text-4xl md:text-7xl font-normal md:font-bold text-[#d88d9c] drop-shadow-sm">{couple.ampersand || "&"}</span>{" "}
+          <span className="block md:inline bg-gradient-to-r from-fern via-hunter-green to-evergreen bg-clip-text text-transparent">{couple.partner2}</span>
         </h1>
 
         <div className="relative inline-flex isolate items-center overflow-hidden rounded-full bg-[#fff6f8]/90 border border-[#f0c2cc] px-8 py-1.5 sm:px-10 sm:py-1.5 md:px-12 md:py-2 shadow-[0_4px_16px_rgba(216,141,156,0.18)] backdrop-blur-sm">
@@ -47,23 +47,23 @@ export default function Hero() {
         </div>
 
         <motion.div
-          className="my-0.5 md:my-1 h-px w-20 md:w-24 bg-palm-leaf"
+          className="my-0.5 md:my-1 h-px w-20 md:w-24 bg-[#e2a8b5]"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1, delay: 0.8, ease: "easeInOut" }}
         />
 
         <div className="flex flex-col items-center gap-0.5 sm:gap-1 md:gap-2 text-evergreen">
-          <p className="text-[0.68rem] sm:text-[0.7rem] font-semibold tracking-[0.28em] text-fern">
+          <p className="text-[0.68rem] sm:text-[0.7rem] font-semibold tracking-[0.28em] text-[#c47585]">
             {event.saveTheDateBadge}
           </p>
           <p className="font-serif text-2xl font-semibold tracking-wide md:text-3xl">
             {event.date}
           </p>
           <div className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-hunter-green md:text-sm">
-            <span className="h-px w-7 md:w-8 bg-palm-leaf" aria-hidden="true" />
+            <span className="h-px w-7 md:w-8 bg-[#e2a8b5]" aria-hidden="true" />
             <span>{location.areaEn}</span>
-            <span className="h-px w-7 md:w-8 bg-palm-leaf" aria-hidden="true" />
+            <span className="h-px w-7 md:w-8 bg-[#e2a8b5]" aria-hidden="true" />
           </div>
         </div>
 
@@ -96,7 +96,7 @@ export default function Hero() {
           <motion.div
             animate={{ y: [0, 4, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="text-warm-gold"
+            className="text-[#c47585]"
           >
             <svg
               className="w-4 h-4 md:w-5 md:h-5 stroke-current"

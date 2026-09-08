@@ -76,7 +76,7 @@ export default function Schedule() {
                 <div className="relative overflow-hidden rounded-[2rem] border border-[#f5d7df] bg-white/95 px-5 py-5 shadow-lg shadow-[#d88d9c]/10 backdrop-blur-sm md:px-6">
                   {/* Subtle corner watermark visible on mobile devices */}
                   <div className="pointer-events-none absolute -bottom-5 -right-5 w-16 h-16 opacity-15" aria-hidden="true">
-                    <Image src="/vines.png" alt="" fill className="object-contain rotate-45" />
+                    <Image src="/vines.png" alt="" fill sizes="64px" className="object-contain rotate-45" />
                   </div>
                   <time className="relative z-10 font-serif text-sm font-semibold tracking-[0.15em] text-[#c47585]">{time}</time>
                   <h3 className="relative z-10 mt-1 font-serif text-xl font-semibold text-evergreen md:text-2xl">{title}</h3>

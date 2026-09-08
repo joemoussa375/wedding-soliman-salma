@@ -53,10 +53,10 @@ export interface WeddingConfig {
 
 export const weddingConfig: WeddingConfig = {
   couple: {
-    partner1: "SALMA",
-    partner2: "SOLIMAN",
+    partner1: "SOLIMAN",
+    partner2: "SALMA",
     ampersand: "&",
-    fullName: "Salma & Soliman",
+    fullName: "Soliman & Salma",
   },
   event: {
     date: "4 October 2026",
@@ -75,7 +75,7 @@ export const weddingConfig: WeddingConfig = {
     venueImage: "/life_eye_resort_see_garden.jpg",
   },
   splash: {
-    type: "curtain", // Curtain opening requested for Salma & Soliman
+    type: "curtain", // Curtain opening requested for Soliman & Salma
     inviteIntroText: "You are joyfully invited to the wedding of",
   },
   music: {
@@ -118,8 +118,8 @@ export const weddingConfig: WeddingConfig = {
     },
   ],
   metadata: {
-    title: "Salma & Soliman — Wedding Invitation",
-    description: "You are joyfully invited to the wedding celebration of Salma & Soliman on 4 October 2026 at Life Eye Resort (Sea Garden).",
+    title: "Soliman & Salma — Wedding Invitation",
+    description: "You are joyfully invited to the wedding celebration of Soliman & Salma on 4 October 2026 at Life Eye Resort (Sea Garden).",
   },
 };
 

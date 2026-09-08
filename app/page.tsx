@@ -13,6 +13,15 @@ export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
   const musicRef = useRef<MusicPlayerHandle>(null);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("nosplash") === "true" || params.get("nosplash") === "1") {
+        setShowSplash(false);
+      }
+    }
+  }, []);
+
   // Disable scrolling while splash is visible
   useEffect(() => {
     document.body.style.overflow = showSplash ? "hidden" : "auto";

@@ -25,7 +25,13 @@ function Flower({ color }: { color: string }) {
 
 export default function Schedule() {
   return (
-    <section id="schedule" className="relative overflow-hidden bg-transparent px-4 py-24 md:py-32">
+    <section 
+      id="schedule" 
+      className="relative overflow-hidden bg-cover bg-center px-4 py-24 md:py-32 border-t border-[#f5d7df]/80 shadow-inner"
+      style={{ backgroundImage: "url('/itinerary-bg.jpg')" }}
+    >
+      {/* Translucent overlay for enhanced readability while showcasing the floral borders */}
+      <div className="pointer-events-none absolute inset-0 bg-[#fffcfb]/65 backdrop-blur-[0.5px]" aria-hidden="true" />
       <div className="pointer-events-none absolute -left-20 top-16 h-64 w-64 rounded-full bg-rose-light/40 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-palm-leaf/15 blur-3xl" />
 
@@ -83,8 +89,12 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#faf5f7]/90 via-[#fcf0f3]/95 to-[#f8eaee] px-4 pb-24 pt-20 md:pb-32 md:pt-28 text-evergreen border-t border-[#f5d7df]">
-      {/* Decorative ambient blurs */}
+    <section 
+      className="relative overflow-hidden bg-cover bg-top px-4 pb-24 pt-20 md:pb-32 md:pt-28 text-evergreen border-t border-[#f5d7df]"
+      style={{ backgroundImage: "url('/faq-bg.jpg')" }}
+    >
+      {/* Translucent overlay allowing cascading garland at top and corners to frame questions */}
+      <div className="pointer-events-none absolute inset-0 bg-[#fff9fa]/60 backdrop-blur-[0.5px]" aria-hidden="true" />
       <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-[#f8d7df]/50 blur-3xl" aria-hidden="true" />
       <div className="pointer-events-none absolute -bottom-16 -right-16 h-72 w-72 rounded-full bg-[#90AA90]/20 blur-3xl" aria-hidden="true" />
 

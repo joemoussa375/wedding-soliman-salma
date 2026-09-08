@@ -46,6 +46,18 @@ export default function RootLayout({
           as="image"
           type="image/jpeg"
         />
+        <link
+          rel="preload"
+          href="/itinerary-bg.jpg"
+          as="image"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          href="/faq-bg.jpg"
+          as="image"
+          type="image/jpeg"
+        />
       </head>
       <body className="min-h-full flex flex-col relative bg-[#faf7f5]">
         <div

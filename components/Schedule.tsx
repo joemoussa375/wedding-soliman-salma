@@ -9,18 +9,42 @@ const events = weddingConfig.schedule;
 
 
 
-function Flower({ color }: { color: string }) {
+function FlowerPin({ petalColor }: { petalColor: string }) {
   return (
-    <span className="relative block h-11 w-11" aria-hidden="true">
-      {[0, 72, 144, 216, 288].map((rotation) => (
-        <span
-          key={rotation}
-          className="absolute left-1/2 top-1/2 h-5 w-3 -translate-x-1/2 -translate-y-1/2 rounded-[75%_25%_75%_25%]"
-          style={{ backgroundColor: color, transform: `translate(-50%, -50%) rotate(${rotation}deg) translateY(-10px)` }}
-        />
-      ))}
-      <span className="absolute left-1/2 top-1/2 h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-warm-gold/70 bg-warm-gold" />
-    </span>
+    <div className="relative z-10 col-start-2 row-start-1 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 border border-[#e8b4c0] shadow-md shadow-[#d88d9c]/20 backdrop-blur-sm">
+      <svg
+        viewBox="0 0 40 40"
+        className="h-7 w-7"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        {/* Outer Petals rotated around exact center */}
+        {[0, 72, 144, 216, 288].map((angle) => (
+          <path
+            key={angle}
+            d="M20 20 C14 13 14 5 20 4 C26 5 26 13 20 20 Z"
+            fill={petalColor}
+            stroke="#ffffff"
+            strokeWidth="0.75"
+            transform={`rotate(${angle} 20 20)`}
+          />
+        ))}
+        {/* Inner Blossom Petals for botanical dimension */}
+        {[36, 108, 180, 252, 324].map((angle) => (
+          <path
+            key={angle}
+            d="M20 20 C16 15 16 9 20 8.5 C24 9 24 15 20 20 Z"
+            fill="#f7cbd3"
+            opacity="0.75"
+            transform={`rotate(${angle} 20 20)`}
+          />
+        ))}
+        {/* Golden pistil center */}
+        <circle cx="20" cy="20" r="3.5" fill="#c89f56" stroke="#ffffff" strokeWidth="0.75" />
+        <circle cx="18.8" cy="18.8" r="1" fill="#ffffff" opacity="0.8" />
+      </svg>
+    </div>
   );
 }
 
@@ -83,9 +107,7 @@ export default function Schedule() {
                   <p className="relative z-10 mt-1.5 text-sm leading-relaxed text-hunter-green">{detail}</p>
                 </div>
               </div>
-              <div className="relative z-10 col-start-2 row-start-1 rounded-full bg-[#fcebee] border border-[#e8b4c0] p-1.5 shadow-sm">
-                <Flower color={flower} />
-              </div>
+              <FlowerPin petalColor={flower} />
             </motion.li>
           ))}
         </ol>
@@ -103,7 +125,7 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-hunter-green px-4 pb-24 pt-16 md:pb-32 md:pt-24 text-lime-cream">
+    <section id="faq" className="relative overflow-hidden bg-hunter-green px-4 pb-24 pt-16 md:pb-32 md:pt-24 text-lime-cream">
       {/* FAQ background image with rich emerald marble & gold veins texture */}
       <div
         className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-80 mix-blend-overlay"
@@ -120,7 +142,7 @@ function FAQ() {
         <p className="mb-2 text-center font-serif text-xl italic text-[#f7c5ce] tracking-wide">
           Any Questions?
         </p>
-        <h2 className="mb-10 text-center font-serif text-4xl font-semibold text-warm-gold md:text-5xl">
+        <h2 className="mb-10 text-center font-serif text-4xl font-semibold md:text-5xl tracking-wide text-[#edd7a6] bg-gradient-to-r from-[#dfb76c] via-[#faecd0] to-[#dfb76c] bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(223,183,108,0.25)]">
           FAQ
         </h2>
 

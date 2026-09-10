@@ -71,8 +71,8 @@ export const weddingConfig: WeddingConfig = {
     areaAr: "الفسطاط، القاهرة",
     areaEn: "Old Cairo, Cairo",
     arrivalNote: "Please arrive by 7:00 PM to celebrate with us.",
-    mapUrl: "https://maps.app.goo.gl/Ee7Ma56UQczQacxb8?g_st=ic",
-    venueImage: "/life_eye_resort_see_garden.jpg",
+    mapUrl: "https://maps.app.goo.gl/FhEZvVANH5FiJhJM9?g_st=ic",
+    venueImage: "/location.jpg",
   },
   splash: {
     type: "curtain", // Curtain opening requested for Soliman & Salma
@@ -88,19 +88,13 @@ export const weddingConfig: WeddingConfig = {
       time: "7:00 PM",
       title: "Entrance",
       detail: "Welcoming guests as everyone arrives and takes their seats.",
-      flower: "#fce7ea",
+      flower: "#e899aa",
     },
     {
       time: "7:30 PM",
       title: "Starting Wedding",
       detail: "The celebration and first dance begin under the night sky.",
-      flower: "#f7d6dc",
-    },
-    {
-      time: "9:30 PM",
-      title: "Buffet",
-      detail: "Open-air dinner buffet and celebrating with family and friends.",
-      flower: "#ffffff",
+      flower: "#d88d9c",
     },
   ],
   faqs: [

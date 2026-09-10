@@ -36,7 +36,7 @@ export default function RootLayout({
       <head>
         <link
           rel="preload"
-          href="/green_curtain.png"
+          href="/pastel_pink_curtain.png"
           as="image"
           type="image/png"
         />

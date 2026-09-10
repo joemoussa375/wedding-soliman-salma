@@ -45,7 +45,7 @@ export default function Location() {
               href={location.mapUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-3 rounded-full bg-evergreen px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-lime-cream transition hover:bg-hunter-green focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-evergreen shadow-md shadow-evergreen/20"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-evergreen px-6 py-3 text-sm font-bold uppercase tracking-[0.14em] text-lime-cream border border-warm-gold/60 backdrop-blur-sm shadow-lg shadow-evergreen/25 transition-all duration-200 hover:bg-hunter-green hover:border-warm-gold hover:shadow-xl hover:shadow-evergreen/35 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-evergreen"
             >
               <span className="h-2 w-2 rounded-full bg-[#f7c5ce] shadow-[0_0_8px_#f7c5ce]" aria-hidden="true" />
               Open in Google Maps

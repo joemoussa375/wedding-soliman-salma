@@ -17,7 +17,7 @@ export default function CurtainSplash({
   useEffect(() => {
     let isCancelled = false;
     const img = new Image();
-    img.src = "/green_curtain.png";
+    img.src = "/pastel_pink_curtain.png";
 
     const handleReady = () => {
       if (isCancelled) return;
@@ -81,9 +81,9 @@ export default function CurtainSplash({
               ease: "easeInOut",
             }}
           >
-            <div className="flex items-center gap-2 rounded-full border border-warm-gold/75 bg-evergreen/90 px-5 py-2.5 shadow-2xl shadow-black/50 backdrop-blur-md">
+            <div className="flex items-center gap-2 rounded-full border border-warm-gold/75 bg-[#6d434e]/90 px-5 py-2.5 shadow-2xl shadow-black/40 backdrop-blur-md">
               <span className="text-sm">✨</span>
-              <span className="font-serif text-xs md:text-sm font-semibold tracking-[0.2em] text-lime-cream uppercase">
+              <span className="font-serif text-xs md:text-sm font-semibold tracking-[0.2em] text-[#fff0f3] uppercase">
                 Tap anywhere to open
               </span>
             </div>
@@ -99,16 +99,16 @@ export default function CurtainSplash({
           return (
             <motion.div
               key={`left-${idx}`}
-              className="absolute top-0 bottom-0 origin-top bg-[#0d2812]"
+              className="absolute top-0 bottom-0 origin-top bg-[#936c76]"
               style={{
                 left: `${idx * 10}%`,
                 width: "10.5%", // slight overlap to prevent gaps during animation
-                backgroundColor: "#0d2812",
-                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.05) 50%, rgba(0,0,0,0.2) 100%), url('/green_curtain.png')`,
+                backgroundColor: "#936c76",
+                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(255,255,255,0.08) 50%, rgba(0,0,0,0.15) 100%), url('/pastel_pink_curtain.png')`,
                 backgroundSize: "100% 100%, 100vw 100vh",
                 backgroundPosition: `0 0, -${totalIndex * 5}vw 0`,
                 backgroundRepeat: "no-repeat",
-                boxShadow: "inset -1px 0 5px rgba(0,0,0,0.2)",
+                boxShadow: "inset -1px 0 5px rgba(0,0,0,0.15)",
               }}
               initial={{ x: "0vw", y: "0vh", rotateZ: 0 }}
               animate={isOpen ? {
@@ -136,16 +136,16 @@ export default function CurtainSplash({
           return (
             <motion.div
               key={`right-${idx}`}
-              className="absolute top-0 bottom-0 origin-top bg-[#0d2812]"
+              className="absolute top-0 bottom-0 origin-top bg-[#936c76]"
               style={{
                 left: `${idx * 10}%`,
                 width: "10.5%", // slight overlap
-                backgroundColor: "#0d2812",
-                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.05) 50%, rgba(0,0,0,0.2) 100%), url('/green_curtain.png')`,
+                backgroundColor: "#936c76",
+                backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(255,255,255,0.08) 50%, rgba(0,0,0,0.15) 100%), url('/pastel_pink_curtain.png')`,
                 backgroundSize: "100% 100%, 100vw 100vh",
                 backgroundPosition: `0 0, -${totalIndex * 5}vw 0`,
                 backgroundRepeat: "no-repeat",
-                boxShadow: "inset 1px 0 5px rgba(0,0,0,0.2)",
+                boxShadow: "inset 1px 0 5px rgba(0,0,0,0.15)",
               }}
               initial={{ x: "0vw", y: "0vh", rotateZ: 0 }}
               animate={isOpen ? {
@@ -176,7 +176,7 @@ export default function CurtainSplash({
 
         <div className="text-center font-serif text-evergreen px-6 z-10 flex flex-col items-center">
           <p className="text-xs md:text-lg italic text-[#c47585] mb-3 md:mb-5">{weddingConfig.splash.inviteIntroText}</p>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-4 md:mb-6 tracking-wide bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 inline-block text-transparent bg-clip-text py-1">{weddingConfig.couple.fullName}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-4 md:mb-6 tracking-wide bg-gradient-to-r from-warm-gold via-[#e8c872] to-warm-gold inline-block text-transparent bg-clip-text py-1">{weddingConfig.couple.fullName}</h2>
           <div className="w-16 h-px bg-[#e2a8b5] mb-4 md:mb-6" />
           <p className="text-[10px] md:text-sm font-sans tracking-widest uppercase text-hunter-green leading-relaxed">
             {weddingConfig.event.date}<br />

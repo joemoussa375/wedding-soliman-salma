@@ -11,6 +11,7 @@ import SideScrollIndicator from "../components/SideScrollIndicator";
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
+  const [musicStarted, setMusicStarted] = useState(false);
   const musicRef = useRef<MusicPlayerHandle>(null);
 
   useEffect(() => {
@@ -31,12 +32,13 @@ export default function Home() {
   }, [showSplash]);
 
   const handleStartMusic = () => {
+    setMusicStarted(true);
     musicRef.current?.play();
   };
 
   return (
     <main className="min-h-screen font-sans">
-      <MusicPlayer ref={musicRef} showControls={!showSplash} />
+      <MusicPlayer ref={musicRef} showControls={!showSplash || musicStarted} />
 
       <AnimatePresence mode="wait">
         {showSplash && (
